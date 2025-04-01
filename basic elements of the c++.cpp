@@ -25,7 +25,7 @@
 //}
 
 ////Exercise 2. Write a program that counts: 
-////2. the area of an equilateral triangle, the perimeter of which is p.
+////2) the area of an equilateral triangle, the perimeter of which is p.
 // 
 //#include <iostream>
 //#include <math.h>
@@ -56,7 +56,7 @@
 //{
 // 
 //	int n;
-//	cout << "Number: " << endl;
+//	cout << "Enter a number: " << endl;
 //	cin >> n;
 //
 //	if (n % 2 == 0) cout << "Yes";
