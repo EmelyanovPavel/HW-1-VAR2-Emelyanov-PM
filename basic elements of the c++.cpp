@@ -1,10 +1,10 @@
 //Topic 1 - Basic elements of the C++ language
-//Exercise 1. Write a program that calculates the value of an expression.
-//2) e^-x - cosx + sin2xy
-
 #include <cstdio>
 #include <iostream> 
 #include <cmath>
+
+//Exercise 1. Write a program that calculates the value of an expression.
+//2) e^-x - cosx + sin2xy
 
 void task1_2()
 {
