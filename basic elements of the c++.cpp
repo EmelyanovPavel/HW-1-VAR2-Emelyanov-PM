@@ -1,60 +1,68 @@
 //Topic 1 - Basic elements of the C++ language
 #include <cstdio>
 #include <iostream> 
+#include <iomanip>
 #include <cmath>
 
 //Exercise 1. Write a program that calculates the value of an expression.
 //2) e^-x - cosx + sin2xy
 
-void task1_2()
+void task1()
 {
-
-
-	int x, y;
-	std::cout << "Enter X and Y :" << std::endl;
-	std::cin >> x >> y;
-
-
-	std::cout << "Solution: " << std::endl;
-	std::cout << " e^-" << x << " - " << round(cos(x)) << " + " << round(sin(2 * x * y)) << " = ";
-	std::cout << " e^-" << x << " + " << abs(round(cos(x)) + round(sin(2 * x * y)));
+    // Declaring variables
+    double x, y, result;
+    
+    //Entering data
+    std::cout << "x: ";
+    std::cin >> x;
+    std::cout << "y: ";
+    std::cin >> y;
+    
+    // Evaluating an expression value
+    result = exp(-x) - cos(x) + sin(2 * x * y);
+    
+    //Output the result with an accuracy of up to 4 decimal places
+    std::cout << std::fixed << std::setprecision(4);
+    std::cout << "Result: " << result << std::endl;
 
 }
 
 //Exercise 2. Write a program that counts: 
 //2) the area of an equilateral triangle, the perimeter of which is p.
 
-void task2_2()
+void task2()
 {
-
-	double p, a;
-	double S;
+    //Declaring variables
+	double p, a, s;
 	std::cin >> p;
-
+	
+    //Finding the side length of an equilateral triangle and its area
 	a = p / 3;
-	S = a * a * sqrt(3.0) / 4.0;
-	std::cout << "the area of an equilateral triangle = " << S << std::endl;
+	s = a * a * sqrt(3.0) / 4.0;
+	std::cout << "the area of an equilateral triangle = " << s << std::endl;
 }
 
 //Exercise 3.
 //2) Write a program that determines whether a given number is even.
 
-void task3_2()
+void task3()
 {
-
-	int n;
-	std::cout << "Enter a number: " << std::endl;
-	std::cin >> n;
-
-	if (n % 2 == 0) std::cout << "Yes";
-	else std::cout << "No";
+	//Declaring variable
+	int number;
+	
+	//Entering a number
+        std::cout << "Input a number: ";
+        std::cin >> number;
+    
+        //Using the ternary operator
+        std::cout << "Number '" << number << "' is " << (number % 2 == 0 ? "even" : "odd") << std::endl;
 }
 
 int main()
 {
-	task1_2();
-	task2_2();
-	task3_2();
+	task1();
+	task2();
+	task3();
 
 	return 0;
 }
